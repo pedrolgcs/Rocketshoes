@@ -1,7 +1,21 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-// import { Container } from './styles';
+// routes
+import Routes from './routes';
+
+// components
+import Header from './components/Header';
+
+// styles
+import GlobalStyle from './styles/global';
 
 export default function src() {
-  return <h1>Hello Rocket</h1>;
+  return (
+    <BrowserRouter>
+      <GlobalStyle />
+      <Header />
+      <Routes />
+    </BrowserRouter>
+  );
 }
