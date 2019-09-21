@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 import './config/ReactotronConfig';
 import store from './store';
 // routes
@@ -19,6 +20,7 @@ export default function src() {
         <GlobalStyle />
         <Header />
         <Routes />
+        <ToastContainer autoClose={3000} />
       </BrowserRouter>
     </Provider>
   );
