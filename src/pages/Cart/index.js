@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   MdRemoveCircleOutline,
@@ -80,6 +80,13 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
     </Container>
   );
 }
+
+Cart.propTypes = {
+  cart: PropTypes.arrayOf,
+  total: PropTypes.number,
+  removeFromCart: PropTypes.func,
+  updateAmountRequest: PropTypes.func,
+}.isRequired;
 
 const mapStateToProps = state => ({
   cart: state.cart.map(product => ({
